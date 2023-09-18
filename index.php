@@ -6,7 +6,7 @@
 
 <body>
     <h1>PHP Starter in CodeSandbox</h1>
-    <?php phpinfo(); ?>
 </body>
+<script type="text/javascript" src="learnphp.js"></script>
 
 </html>
