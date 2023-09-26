@@ -1,0 +1,71 @@
+let batchPivotTable = workbook.getWorksheet("BatchPivotTable");
+// Delete worksheet batchPivotTable
+batchPivotTable.delete();
+// Add a new worksheet
+let sheet5 = workbook.addWorksheet();
+let maildeskDate_Received__Time_Cre = workbook.getWorksheet("maildeskDate Received \tTime Cre");
+// Add a new pivot table on sheet5
+let newPivotTable = workbook.addPivotTable("PivotTable3", maildeskDate_Received__Time_Cre.getRange("A1:R459"), sheet5.getRange("A1"));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Date Received "));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Batch No."));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Time Completed"));
+// This action currently can't be recorded.
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Time Elasped"));
+// This action currently can't be recorded.
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Within 1 Hour"));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addDataHierarchy(newPivotTable.getHierarchy("Within SLA"));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Teller "));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Date Processed "));
+// Remove pivot field from a hierarchy in newPivotTable
+newPivotTable.removeRowHierarchy(newPivotTable.getRowHierarchy("Minutes (Time Completed)"));
+// Remove pivot field from a hierarchy in newPivotTable
+newPivotTable.removeRowHierarchy(newPivotTable.getRowHierarchy("Hours (Time Completed)"));
+// Remove pivot field from a hierarchy in newPivotTable
+newPivotTable.removeRowHierarchy(newPivotTable.getRowHierarchy("Minutes (Time Elasped)"));
+// Remove pivot field from a hierarchy in newPivotTable
+newPivotTable.removeRowHierarchy(newPivotTable.getRowHierarchy("Hours (Time Elasped)"));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addDataHierarchy(newPivotTable.getHierarchy("Within 1 Hour"));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addDataHierarchy(newPivotTable.getHierarchy("Time Elasped"));
+// Add pivot field to a hierarchy in newPivotTable
+newPivotTable.addFilterHierarchy(newPivotTable.getHierarchy("Teller "));
+// Change pivot position in a hierarchy in newPivotTable
+newPivotTable.getRowHierarchy("Batch No.").setPosition(0);
+// Change pivot position in a hierarchy in newPivotTable
+newPivotTable.getRowHierarchy("Date Processed ").setPosition(2);
+
+
+
+
+
+let pivotTable4 = workbook.getPivotTable("PivotTable4");
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addRowHierarchy(pivotTable4.getHierarchy("Batch No."));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addRowHierarchy(pivotTable4.getHierarchy("Date Received "));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addRowHierarchy(pivotTable4.getHierarchy("Date Processed "));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addRowHierarchy(pivotTable4.getHierarchy("Time Completed"));
+// This action currently can't be recorded.
+// Remove pivot field from a hierarchy in pivotTable4
+pivotTable4.removeRowHierarchy(pivotTable4.getRowHierarchy("Minutes (Time Completed)"));
+// Remove pivot field from a hierarchy in pivotTable4
+pivotTable4.removeRowHierarchy(pivotTable4.getRowHierarchy("Hours (Time Completed)"));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addDataHierarchy(pivotTable4.getHierarchy("Batch No."));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addDataHierarchy(pivotTable4.getHierarchy("Time Elasped"));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addDataHierarchy(pivotTable4.getHierarchy("Within 1 Hour"));
+// Add pivot field to a hierarchy in pivotTable4
+pivotTable4.addDataHierarchy(pivotTable4.getHierarchy("Within SLA"));
