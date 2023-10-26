@@ -1,5 +1,13 @@
-let vegetables = ['cabbage', 'lettuce', 'kale', 'spinach'];
+const javascriptText = document.getElementById("javascripttext");
 
-// document.write(vegetables);
-document.write(vegetables[-1]);
-console.log(vegetables[-1]);
+function vegebege() {
+  let vegetables = ["cabbage", "lettuce", "kale", "spinach"];
+
+  javascriptText.insertAdjacentHTML("beforeend", `<p>${vegetables}</p>`);
+
+  // document.write(vegetables);
+  //   document.write(vegetables[-1]);
+  //   console.log(vegetables[-1]);
+}
+
+vegebege();
