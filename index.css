@@ -9,6 +9,8 @@ body {
   border-radius: 5px;
   text-decoration: none;
   color: #ffffff;
+  margin: 5px auto;
+  display: inline-block;
 }
 
 .btn-primary {

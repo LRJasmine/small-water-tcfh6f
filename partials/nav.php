@@ -10,10 +10,10 @@
             <a href="#">Menu</a>
         </li>
         <li>
-            <a href="#">Specials</a>
+            <a href="/learningphpprojects/branch1.31/app/App.php">Mini App</a>
         </li>
         <li>
-            <a href="#">Contact</a>
+            <a href="/learningphpprojects/branch1.31/public/index.php">MiniProject 1.31</a>
         </li>
     </ul>
 </nav>
